@@ -1,35 +1,137 @@
+*{
+    font-family: "Courier New", Courier, monospace;
+}
 h1{
     color: red;
 }
 header{
-    border-bottom: 1px solid black;
+    border-radius:10px;
+    border: 5px solid rgb(0, 143, 17);
     padding: 20px 50px;
+    background-color: rgb(13,2,8);
+
     }
 header *{
     display: inline-block;
 }
 header a{
     margin: 0 0 0 20%;
+    
 }
+#QuotesColumn{
+    background-color: rgb(0, 143, 17);
+    border-radius: 5%;
+    /* padding: 5%; */
+    margin: 5%;
+    border: 5px solid rgb(0,143,17);
+}
+#QuotesColumn h4{
+    text-align: center;
+}
+#QuotesColumn a.btn-danger{
+    background-color: rgb(216, 7, 171);
+    margin-left: 60%;
+    border: 2px solid rgb(0, 255, 65);
 
+
+}
+#QuotesColumn button.btn-success{
+    background-color: rgb(1, 205, 204);
+    margin-left: 5%;
+    border: 2px solid rgb(0, 255, 65);
+
+
+}
+#addQuoteField{
+    border-radius: 5%;
+    padding: 2%;
+    margin: 5%;
+    border: 5px solid rgb(0,143,17);
+    color:rgb(0, 255, 65);
+    height: 300px;
+    
+}
+#addQuoteField button{
+    background-color: rgb(216, 7, 171);
+    border: 2px solid rgb(0, 255, 65);
+
+}
+#editForm{
+    color:rgb(0, 255, 65);
+    border-radius: 5%;
+    padding: 2%;
+    margin: 5%;
+    border: 5px solid rgb(0,143,17);
+}
+#editForm button{
+    background-color: rgb(216, 7, 171);
+    margin-left: 85%;
+    border: 2px solid rgb(0, 255, 65);
+}
 main{
     padding:  20px 10%;
+    background-color:rgb(13, 2, 8);
 }
 .pink{
-    background-color:pink;
+    background-color:rgb(13, 2, 8);
     margin-top:20px;
     padding: 20px;
     border-radius:10px;
+    border: 5px solid rgb(0, 143, 17);
+    color: rgb(0, 255, 65);
 }
 .quote{
     border: 1px solid black;
     padding: 10px;
     width: 80%;
     margin: 20px auto;
+    background-color: rgb(13,2,8);
+    border: 5px solid rgb(0,143,17);
+    color: rgb(0, 255, 65);
+
+    border-radius: 5%;
+    padding: 5%;
+
+}
+.quote.link{
+    text-decoration: underline;
+
+
+}
+a.delete.btn{
+    color: white;
+    text-decoration: none;
+
+}
+.quote a{
+    color: rgb(0, 255, 65);
+    text-decoration: underline;
 }
 .quote :last-child{
     margin-left: 60%;
 }
 #addQuoteField button{
     margin: 20px 0 0 75%
+}
+
+body{
+    background-color: rgb(0, 143, 17);
+    align-content: center;
+
+}
+#background
+{
+    background-color: rgb(13, 2, 8);
+    width: 80;
+    margin: 5%;
+    padding: 2%;
+    border-radius: 2%;
+}
+#background label, h3, h2{
+    color: rgb(0, 255, 65); 
+}
+button .btn-success{
+    color: black;
+    border: 2px solid rgb(0, 255, 65);
+
 }

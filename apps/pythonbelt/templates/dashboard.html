@@ -16,7 +16,9 @@
 <body>
     <header>
         <div class="row">
+
             <div class="col-sm">
+                
                 <h3>Welcome, {{first_name}} {{last_name}}!</h3>
                
             </div>
@@ -24,11 +26,13 @@
                 <a href="{{id}}/edit" class="btn btn-secondary">Edit Profile</a>
                 <a href="logout" class = "btn btn-danger">Logout</a>
             </div>
+        </div>
             
     </header>
     <main>
         <div class="row">
-            <div class="col-sm">
+            <div id="QuotesColumn" class="col-sm">
+
                 <h4>Quotes:</h4>
                 
                 {% for quote in request.session.quotes %}
@@ -37,12 +41,12 @@
                     
                     <p>"{{quote.text}}"</p>
                     <p>- {{quote.author}}</p>
-                    <a href="{{quote.user_id}}/userQuotes">{{quote.user_firstname}} {{quote.user_lastname}}</a>
+                    <a class ="quoteLink" href="{{quote.user_id}}/userQuotes">{{quote.user_firstname}} {{quote.user_lastname}}</a>
                     <p>LIKES:{{quote.likes}}</p>
                     {% if first_name != quote.user_firstname %}
-                    <a href="likes/{{quote.id}}" class="btn btn-success">LIKE </a>
+                    <a href="likes/{{quote.id}}" ><button class="like btn btn-success">LIKE</button>  </a>
                     {% else %}
-                    <a href="{{quote.id}}/delete" class="btn btn-danger">DELETE </a>
+                    <a href="{{quote.id}}/delete" class="delete btn btn-danger">DELETE </a>
                     {% endif %}
                 </div>
                 {% endfor %}

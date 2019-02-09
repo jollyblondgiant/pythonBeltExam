@@ -116,6 +116,6 @@ class Quote(models.Model):
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
     liked_by_user=models.ManyToManyField(User, related_name="liked_quotes")
-    added_by_id=models.ForeignKey(User, related_name="quote_added")
+    added_by_id=models.ForeignKey(User, related_name="quote_added", on_delete=models.CASCADE)
     liked_by_user=models.ManyToManyField(User, related_name="liked_quotes")
     objects = Validator()

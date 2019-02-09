@@ -14,65 +14,66 @@
 </head>
 
 <body>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <h3>Registration</h3>
-                <form action="register" method="POST">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label>First Name</label>
-                        <input type="text" class="form-control" id="firstname" name="first_name">
-                    </div>
-                    <div class="form-group">
-                        <label>Last Name</label>
-                        <input type="text" class="form-control" id="lastname" name="last_name">
-                    </div>
-                    <div class="form-group">
-                        <label>Email address</label>
-                        <input type="email" class="form-control" id="InputEmail1" name="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="Password1" name="password" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirmpw" name='password_confirm' placeholder="Password">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-            <div class="col-sm">
-                <h3>Login</h3>
-                <form action="login" method="POST">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label>Email address</label>
-                        <input type="email" class="form-control" name="loginEmail">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" name='loginPassword' placeholder="Password">
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-                {% if messages %}
-                <div class="pink">
-                <ul class="messages">
-                {% for message in messages %}
-                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                {% endfor %}
-                </ul>
+    <div id="background">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h2>Registration</h2>
+                    <form action="register" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" class="form-control" id="firstname" name="first_name">
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control" id="lastname" name="last_name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email address</label>
+                            <input type="email" class="form-control" id="InputEmail1" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="Password1" name="password" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmpw" name='password_confirm' placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
                 </div>
-                {% endif %}
+                <div class="col-sm">
+                    <h3>Login</h3>
+                    <form action="login" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label>Email address</label>
+                            <input type="email" class="form-control" name="loginEmail">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" name='loginPassword' placeholder="Password">
+                        </div>
 
-                
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                    {% if messages %}
+                    <div class="pink">
+                        <ul class="messages">
+                        {% for message in messages %}
+                            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
             </div>
-            {% load static %}
-            <script type="text/javascript" src="{% static 'jscript/main.js' %}"></script>
+        </div>
+    </div>
+    {% load static %}
+    <script type="text/javascript" src="{% static 'jscript/main.js' %}"></script>
 </body>
 
 </html>
